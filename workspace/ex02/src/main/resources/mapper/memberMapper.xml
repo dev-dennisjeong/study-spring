@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ex02.mapper.MemberMapper">
+    <insert id="insert">
+        insert into tbl_member
+        (member_identification, member_password)
+        values(#{memberIdentification}, #{memberPassword})
+    </insert>
+
+    <update id="update">
+        update tbl_member
+        set member_identification = #{memberIdentification}, member_password = #{memberPassword}
+        where member_id = #{memberId}
+    </update>
+
+    <select id="select" resultType="memberVO">
+        select member_id, member_identification, member_password
+        from tbl_member
+        where member_id = #{memberId}
+    </select>
+
+    <delete id="delete">
+        delete from tbl_member
+        where member_id = #{memberId}
+    </delete>
+</mapper>

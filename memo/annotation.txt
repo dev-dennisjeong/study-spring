@@ -1,0 +1,29 @@
+
+@Component 
+- 개발자가 생성한 class를 Spring의 Bean으로 등록할 때 사용
+@Data 
+- @toString + @getter + @setter + @RequiredArgsConstructor + @EqualsAndHashCode
+@toString 
+- toString() 메서드를 생성한다. @toString(exclude = {"제외값"})으로 제외시키고 싶은 값을 설정할 수 있다.
+@getter/setter 
+- getter, settet 메서드 생성
+@RequiredArgsConstructor 
+- 초기화 되지 않은 모든 final 필드, @NonNull과 같이 제약조건이  설정되어있는 모든 필드들에 대한 
+생성자를 자동으로 생성한다.
+@EqualsAndHashCode - equals(), hashCode() 메서드를 생성한다.
+@Autowired - 필요한 의존 객체의 타입에 해당하는 빈을 찾아 주입
+필드주입, 세터주입, 생성자주입 3가지가 있다. 이 중 생성자 주입만 사용
+
+
+
+IoC(제어반전) - 객체의 생성, 생명주기의 관리까지 모든 객체에 대한 제어권이 바뀌었다는 것을 의미
+IoC 컨테이너 - 컨테이너는 보통 객체의 생명주기를 관리, 생성된 인스턴스들에게 추가적인 기능을 제공하도록 하는 것
+	스프링 프레임워크도 객체를 생성하고 관리하고 책임지고 의존성을 관리해주는 컨테이너가 있는데,
+	그것이 바로 IoC 컨테이너(=스프링 컨테이너)
+
+
+
+
+
+
+
